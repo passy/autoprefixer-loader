@@ -21,7 +21,6 @@ module.exports = function(source) {
     }
   }
 
-  console.log('browsers: ', browsers);
   processed = autoprefixer.apply(autoprefixer, browsers)
     .process(source);
 
