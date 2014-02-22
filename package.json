@@ -1,0 +1,35 @@
+{
+  "name": "autoprefixer-loader",
+  "version": "0.1.0",
+  "description": "Autoprefixer loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack-dev-server --config test/webpack.config.js"
+  },
+  "author": "Pascal Hartig <phartig@rdrei.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:passy/autoprefixer-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/passy/autoprefixer-loader/issues"
+  },
+  "dependencies": {
+    "autoprefixer": "^1.1.20140222",
+    "loader-utils": "^0.2.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "~0.11.0",
+    "should": "~2.0.2",
+    "mocha": "~1.14.0",
+    "mocha-loader": "~0.6.3",
+    "css-loader": "~0.6.2",
+    "raw-loader": "~0.5.0"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "autoprefixer"
+  ]
+}
