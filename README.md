@@ -1,4 +1,5 @@
-# autoprefixer-loader [![Build Status](https://travis-ci.org/passy/autoprefixer-loader.svg?branch=master)](https://travis-ci.org/passy/autoprefixer-loader)
+# autoprefixer-loader [![Build Status](https://travis-ci.org/passy/autoprefixer-loader.svg?branch=master)](https://travis-ci.org/passy/autoprefixer-loader) [![Dependency Status](https://gemnasium.com/passy/autoprefixer-loader.png)](https://gemnasium.com/passy/autoprefixer-loader) [![Code Climate](https://codeclimate.com/github/passy/autoprefixer-loader.png)](https://codeclimate.com/github/passy/autoprefixer-loader)
+
 An [autoprefixer](https://github.com/ai/autoprefixer) loader for [webpack](https://github.com/webpack/webpack).
 
 ## Usage
