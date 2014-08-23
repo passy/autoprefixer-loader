@@ -1,7 +1,5 @@
 var loaderUtils = require('loader-utils');
 var autoprefixer = require('autoprefixer');
-var path = require('path');
-var fs = require('fs');
 
 module.exports = function (source) {
   if (this.cacheable) {
