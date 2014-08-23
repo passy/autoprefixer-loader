@@ -1,5 +1,5 @@
 # autoprefixer-loader
-A [autoprefixer](https://github.com/ai/autoprefixer) loader for [webpack](https://github.com/webpack/webpack).
+An [autoprefixer](https://github.com/ai/autoprefixer) loader for [webpack](https://github.com/webpack/webpack).
 
 ## Usage
 
