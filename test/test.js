@@ -22,4 +22,19 @@ describe('basic', function() {
         (typeof css).should.be.eql('string');
         css.should.equal(fix);
     });
+
+    it('should accept a cascade parameter', function() {
+        var css = require('!raw-loader!../?browsers=Firefox 15&cascade=false!./fixtures/nocascade.css');
+        var fix = require('!raw-loader!./fixtures/nocascade_expected.css');
+
+        (typeof css).should.be.eql('string');
+        css.should.equal(fix);
+    });
+
+    it('should accept a safe parameter', function() {
+        var css = require('!raw-loader!../?safe=true!./fixtures/broken.css');
+
+        (typeof css).should.be.eql('string');
+        css.should.equal(css);
+    });
 });

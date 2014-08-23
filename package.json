@@ -16,7 +16,7 @@
     "url": "https://github.com/passy/autoprefixer-loader/issues"
   },
   "dependencies": {
-    "autoprefixer": "^1.1.20140222",
+    "autoprefixer-core": "^3.0.0",
     "loader-utils": "^0.2.1"
   },
   "devDependencies": {

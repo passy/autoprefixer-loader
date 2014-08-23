@@ -1,26 +1,26 @@
 var loaderUtils = require('loader-utils');
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('autoprefixer-core');
 
 module.exports = function (source) {
   if (this.cacheable) {
     this.cacheable();
   }
 
-  var options = loaderUtils.parseQuery(this.query);
-  var processed;
-  var browsers = ['> 1%', 'last 2 versions',
-  'Firefox ESR', 'Opera 12.1'];
+  var params = loaderUtils.parseQuery(this.query);
 
-  if (options.browsers) {
-    if (Array.isArray(options.browsers)) {
-      browsers = options.browsers;
-    } else {
-      browsers = options.browsers.split(',');
-    }
+  if (params.browsers && !Array.isArray(params.browsers)) {
+    params.browsers = params.browsers.split(',');
+  }
+  if (params.cascade == 'false') {
+    params.cascade = false;
   }
 
-  processed = autoprefixer.apply(autoprefixer, browsers)
-    .process(source);
+  var options = { };
+  if (params.safe) {
+    delete params.safe;
+    options.safe = true;
+  }
 
+  var processed = autoprefixer(params).process(source, options);
   this.callback(null, processed.css, processed.map);
 };
