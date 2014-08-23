@@ -1,4 +1,4 @@
-# autoprefixer-loader
+# autoprefixer-loader [![Build Status](https://travis-ci.org/passy/autoprefixer-loader.svg?branch=master)](https://travis-ci.org/passy/autoprefixer-loader)
 An [autoprefixer](https://github.com/ai/autoprefixer) loader for [webpack](https://github.com/webpack/webpack).
 
 ## Usage
