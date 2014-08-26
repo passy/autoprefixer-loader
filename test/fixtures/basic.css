@@ -1,3 +1,4 @@
-:fullscreen a {
-    transition: transform 1s
+a {
+    -moz-border-radius: 5px;
+         border-radius: 5px
 }
