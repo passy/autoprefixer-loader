@@ -1,6 +1,6 @@
 {
   "name": "autoprefixer-loader",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Autoprefixer loader for webpack",
   "main": "index.js",
   "author": "Pascal Hartig <phartig@rdrei.net>",
@@ -27,7 +27,11 @@
     "should": "~2.0.2",
     "gulp": "~3.8.7"
   },
-  "keywords": ["webpack", "loader", "autoprefixer"],
+  "keywords": [
+    "webpack",
+    "loader",
+    "autoprefixer"
+  ],
   "files": [
     "index.js"
   ],
