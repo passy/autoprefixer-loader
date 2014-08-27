@@ -28,13 +28,57 @@ Use in tandem with the [style-loader](https://github.com/webpack/style-loader) t
 
 ```js
 module: {
-  loaders: [
-    { test: /\.css/, loader: 'style-loader!css-loader!autoprefixer-loader' }
-  ]
+  loaders: [{
+    test: /\.css/,
+    loader: 'style-loader!css-loader!autoprefixer-loader'
+  }]
 }
 ```
 
 and then `require('./file.css');` will compile and add the CSS to your page.
+
+## Options
+
+### `browser`
+
+Specify a single or a list of browsers to support. [Read
+  more](https://github.com/postcss/autoprefixer#browsers)
+
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?browsers=last 2 version, Firefox 15',
+  ...
+}]
+```
+
+### `cascade`
+
+*Default: true*
+
+When disabled, autoprefixer creates no visual cascade for the generated
+prefixes.
+[Read more](https://github.com/postcss/autoprefixer#visual-cascade)
+
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?cascade=false',
+  ...
+}]
+```
+
+### `safe`
+
+*Default: false*
+
+When enabled, autoprefixer will attempt to parse invalid CSS. [Read
+more](https://github.com/postcss/autoprefixer-core#safe-mode)
+
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?safe=true',
+  ...
+}]
+```
 
 ## Install
 
