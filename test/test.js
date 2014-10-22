@@ -11,8 +11,9 @@ describe('basic', function() {
         var css = require('!css-loader!../!./fixtures/basic.css');
         var fix = require('!raw-loader!./fixtures/basic_expected.css');
 
-        (typeof css).should.be.eql('string');
-        css.should.equal(fix);
+        (Array.isArray(css)).should.be.eql(true);
+        (typeof css[0][1]).should.be.eql('string');
+        css[0][1].should.equal(fix);
     });
 
     it('should accept a browser parameter', function() {
