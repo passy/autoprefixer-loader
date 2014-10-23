@@ -22,6 +22,23 @@ module.exports = function (source) {
         options.safe = true;
     }
 
+    var whitelist = {
+        browsers: true,
+        cascade: true
+    };
+    var unknownParams = [];
+    for (var i in params) {
+        if (!whitelist[i])
+            unknownParams.push(i);
+    }
+    if (unknownParams.length) {
+        var warn = unknownParams.length === 1 ?
+            'Autoprefixer-loader got this undocumented option: ' :
+            'Autoprefixer-loader got these undocumented options: ';
+        warn += unknownParams.join(', ');
+        this.emitWarning(warn);
+    }
+
     var processed = autoprefixer(params).process(source, options);
     this.callback(null, processed.css, processed.map);
 };
