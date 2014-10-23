@@ -39,7 +39,7 @@ and then `require('./file.css');` will compile and add the CSS to your page.
 
 ## Options
 
-### `browser`
+### `browsers`
 
 Specify a single or a list of browsers to support. [Read
   more](https://github.com/postcss/autoprefixer#browsers)
