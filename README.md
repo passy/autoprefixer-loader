@@ -41,12 +41,20 @@ and then `require('./file.css');` will compile and add the CSS to your page.
 
 ### `browsers`
 
-Specify a single or a list of browsers to support. [Read
+Specify a single browser to support. [Read
   more](https://github.com/postcss/autoprefixer#browsers)
 
 ```js
 loaders: [{
-  loader: 'css-loader!autoprefixer-loader?browsers=last 2 version, Firefox 15',
+  loader: 'css-loader!autoprefixer-loader?browsers=last 2 version',
+  ...
+}]
+```
+
+For a list of browsers use JSON syntax.
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?{browsers:["last 2 version", "Firefox 15"]}',
   ...
 }]
 ```
