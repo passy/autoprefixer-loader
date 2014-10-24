@@ -17,7 +17,7 @@ Or within the webpack config:
 module: {
   loaders: [{
     test: /\.css$/,
-    loader: 'css-loader!autoprefixer-loader?browsers=last 2 version, Firefox 15'
+    loader: 'css-loader!autoprefixer-loader?browsers=last 2 version'
   }]
 }
 ```
