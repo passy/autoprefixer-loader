@@ -43,7 +43,7 @@ module.exports = function (source, map) {
     if(map) {
         options.map = {
             prev: map
-        }
+        };
     }
 
     var processed = autoprefixer(params).process(source, options);
