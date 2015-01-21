@@ -1,5 +1,6 @@
 var loaderUtils = require('loader-utils');
 var autoprefixer = require('autoprefixer-core');
+var path = require('path');
 
 module.exports = function (source, map) {
     if (this.cacheable) {
@@ -16,7 +17,7 @@ module.exports = function (source, map) {
         params.cascade = false;
     }
 
-    var options = { from: file };
+    var options = { from: path.relative(this.options.context, this.resource) };
     if (params.safe) {
         delete params.safe;
         options.safe = true;
