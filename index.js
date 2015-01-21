@@ -1,7 +1,7 @@
 var loaderUtils = require('loader-utils');
 var autoprefixer = require('autoprefixer-core');
 
-module.exports = function (source) {
+module.exports = function (source, map) {
     if (this.cacheable) {
         this.cacheable();
     }
@@ -37,6 +37,12 @@ module.exports = function (source) {
             'Autoprefixer-loader got these undocumented options: ';
         warn += unknownParams.join(', ');
         this.emitWarning(warn);
+    }
+
+    if(map) {
+        options.map = {
+            prev: map
+        }
     }
 
     var processed = autoprefixer(params).process(source, options);
