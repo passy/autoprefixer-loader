@@ -40,7 +40,7 @@ module.exports = function (source, map) {
         this.emitWarning(warn);
     }
 
-    if(map) {
+    if (map) {
         options.map = {
             prev: map
         };
