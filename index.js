@@ -1,7 +1,8 @@
 var loaderUtils = require('loader-utils');
 var autoprefixer = require('autoprefixer-core');
+var path = require('path');
 
-module.exports = function (source) {
+module.exports = function (source, map) {
     if (this.cacheable) {
         this.cacheable();
     }
@@ -16,7 +17,7 @@ module.exports = function (source) {
         params.cascade = false;
     }
 
-    var options = { from: file };
+    var options = { from: path.relative(this.options.context, this.resource) };
     if (params.safe) {
         delete params.safe;
         options.safe = true;
@@ -37,6 +38,12 @@ module.exports = function (source) {
             'Autoprefixer-loader got these undocumented options: ';
         warn += unknownParams.join(', ');
         this.emitWarning(warn);
+    }
+
+    if (map) {
+        options.map = {
+            prev: map
+        };
     }
 
     var processed = autoprefixer(params).process(source, options);
