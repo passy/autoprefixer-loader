@@ -1,6 +1,6 @@
 {
   "name": "autoprefixer-loader",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Autoprefixer loader for webpack",
   "main": "index.js",
   "author": "Pascal Hartig <phartig@rdrei.net>",
@@ -13,7 +13,7 @@
     "url": "https://github.com/passy/autoprefixer-loader/issues"
   },
   "dependencies": {
-    "autoprefixer-core": "^5.0.0",
+    "autoprefixer-core": "^5.1.0",
     "loader-utils": "^0.2.5"
   },
   "devDependencies": {
