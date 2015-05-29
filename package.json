@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "autoprefixer-core": "^5.1.0",
-    "loader-utils": "^0.2.5"
+    "loader-utils": "^0.2.5",
+    "postcss": "^4.1.11"
   },
   "devDependencies": {
     "css-loader": "^0.14.0",

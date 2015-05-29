@@ -1,5 +1,6 @@
 var loaderUtils = require('loader-utils');
-var autoprefixer = require('autoprefixer-core');
+var autoprefixerCore = require('autoprefixer-core');
+var postcss = require('postcss');
 var path = require('path');
 
 module.exports = function (source, map) {
@@ -46,6 +47,7 @@ module.exports = function (source, map) {
         };
     }
 
-    var processed = autoprefixer(params).process(source, options);
+    var autoprefixer = autoprefixerCore(params);
+    var processed = postcss([autoprefixer]).process(source, options);
     this.callback(null, processed.css, processed.map);
 };
