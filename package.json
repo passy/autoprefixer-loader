@@ -14,10 +14,11 @@
   },
   "dependencies": {
     "autoprefixer-core": "^5.1.0",
-    "loader-utils": "^0.2.5"
+    "loader-utils": "^0.2.5",
+    "postcss": "^4.1.11"
   },
   "devDependencies": {
-    "css-loader": "^0.9.0",
+    "css-loader": "^0.14.0",
     "fs-extra": "^0.16.0",
     "gulp": "^3.8.9",
     "gulp-jshint": "^1.8.5",
@@ -25,7 +26,7 @@
     "gulp-webpack": "^1.0.0",
     "jshint-stylish": "^1.0.0",
     "raw-loader": "^0.5.1",
-    "should": "^5.0.1"
+    "should": "^6.0.3"
   },
   "keywords": [
     "webpack",
