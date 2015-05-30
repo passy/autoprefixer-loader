@@ -96,6 +96,7 @@ loaders: [{
 In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
+* 2.0.0 - Updated autoprefixer + postcss
 * 1.2.0 - Added support for existing sourcemaps from earlier in the chain
 * 0.1.0 - Initial release
 
