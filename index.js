@@ -14,7 +14,7 @@ module.exports = function (source, map) {
     if (params.browsers && !Array.isArray(params.browsers)) {
         params.browsers = params.browsers.split(',');
     }
-    if (params.cascade == 'false') {
+    if (params.cascade === 'false') {
         params.cascade = false;
     }
 
@@ -30,8 +30,9 @@ module.exports = function (source, map) {
     };
     var unknownParams = [];
     for (var i in params) {
-        if (!whitelist[i])
+        if (!whitelist[i]) {
             unknownParams.push(i);
+        }
     }
     if (unknownParams.length) {
         var warn = unknownParams.length === 1 ?
