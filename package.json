@@ -19,12 +19,12 @@
   },
   "devDependencies": {
     "css-loader": "^0.14.0",
-    "fs-extra": "^0.16.0",
+    "fs-extra": "^0.18.4",
     "gulp": "^3.8.9",
     "gulp-jshint": "^1.8.5",
     "gulp-mocha": "^2.0.0",
     "gulp-webpack": "^1.0.0",
-    "jshint-stylish": "^1.0.0",
+    "jshint-stylish": "^2.0.0",
     "raw-loader": "^0.5.1",
     "should": "^6.0.3"
   },
