@@ -13,9 +13,9 @@
     "url": "https://github.com/passy/autoprefixer-loader/issues"
   },
   "dependencies": {
-    "autoprefixer-core": "^5.1.0",
+    "autoprefixer-core": "^5.2.0",
     "loader-utils": "^0.2.5",
-    "postcss": "^4.1.11"
+    "postcss": "^5.0.3"
   },
   "devDependencies": {
     "css-loader": "^0.14.0",
@@ -25,6 +25,7 @@
     "gulp-mocha": "^2.0.0",
     "gulp-webpack": "^1.0.0",
     "jshint-stylish": "^2.0.0",
+    "postcss-safe-parser": "^1.0.1",
     "raw-loader": "^0.5.1",
     "should": "^6.0.3"
   },

@@ -2,6 +2,7 @@ var loaderUtils = require('loader-utils');
 var autoprefixerCore = require('autoprefixer-core');
 var postcss = require('postcss');
 var path = require('path');
+var safe = require('postcss-safe-parser');
 
 module.exports = function (source, map) {
     if (this.cacheable) {
@@ -21,7 +22,7 @@ module.exports = function (source, map) {
     var options = { from: path.relative(this.options.context, this.resource) };
     if (params.safe) {
         delete params.safe;
-        options.safe = true;
+        options.parser = safe;
     }
 
     var whitelist = {
