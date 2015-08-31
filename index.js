@@ -19,7 +19,7 @@ module.exports = function (source, map) {
         params.cascade = false;
     }
 
-    var options = { from: path.relative(this.options.context, this.resource) };
+    var options = {from: path.relative(this.options.context, this.resource)};
     if (params.safe) {
         delete params.safe;
         options.parser = safe;
@@ -27,7 +27,9 @@ module.exports = function (source, map) {
 
     var whitelist = {
         browsers: true,
-        cascade: true
+        cascade: true,
+        add: false,
+        remove: true
     };
     var unknownParams = [];
     for (var i in params) {
