@@ -8,7 +8,6 @@ module.exports = function (source, map) {
         this.cacheable();
     }
 
-    var file = loaderUtils.getRemainingRequest(this);
     var params = loaderUtils.parseQuery(this.query);
 
     if (params.browsers && !Array.isArray(params.browsers)) {
@@ -18,7 +17,7 @@ module.exports = function (source, map) {
         params.cascade = false;
     }
 
-    var options = { from: path.relative(this.options.context, this.resource) };
+    var options = {from: path.relative(this.options.context, this.resource)};
     if (params.safe) {
         delete params.safe;
         options.safe = true;
@@ -26,7 +25,7 @@ module.exports = function (source, map) {
 
     var whitelist = {
         browsers: true,
-        cascade: true
+        cascade: true,
     };
     var unknownParams = [];
     for (var i in params) {
@@ -44,7 +43,7 @@ module.exports = function (source, map) {
 
     if (map) {
         options.map = {
-            prev: map
+            prev: map,
         };
     }
 

@@ -26,7 +26,8 @@
     "gulp-webpack": "^1.0.0",
     "jshint-stylish": "^2.0.0",
     "raw-loader": "^0.5.1",
-    "should": "^6.0.3"
+    "should": "^6.0.3",
+    "xo": "^0.7.1"
   },
   "keywords": [
     "webpack",
@@ -36,7 +37,13 @@
   "files": [
     "index.js"
   ],
+  "xo": {
+    "space": 4,
+    "rules": {
+      "comma-dangle": [2, "always-multiline"]
+    }
+  },
   "scripts": {
-    "test": "gulp"
+    "test": "xo && gulp"
   }
 }
