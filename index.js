@@ -9,7 +9,6 @@ module.exports = function (source, map) {
         this.cacheable();
     }
 
-    var file = loaderUtils.getRemainingRequest(this);
     var params = loaderUtils.parseQuery(this.query);
 
     if (params.browsers && !Array.isArray(params.browsers)) {

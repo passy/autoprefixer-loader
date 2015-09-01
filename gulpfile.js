@@ -1,9 +1,10 @@
 'use strict';
 var gulp = require('gulp');
-var fs   = require('fs-extra');
+var fs = require('fs-extra');
+var path = require('path');
 
 gulp.task('clean', function (done) {
-    fs.remove(__dirname + '/build', done);
+    fs.remove(path.join(__dirname, '/build'), done);
 });
 
 gulp.task('lint', function () {
@@ -21,12 +22,12 @@ gulp.task('build', ['clean'], function () {
     return gulp.src('')
         .pipe(webpack({
             target: 'node',
-            context: __dirname + '/test/',
+            context: path.join(__dirname, '/test/'),
             entry: './test.js',
             output: {
-                path: __dirname + '/build/',
-                filename: "test.js",
-            }
+                path: path.join(__dirname, '/build/'),
+                filename: 'test.js',
+            },
         }))
         .pipe(gulp.dest('build/'));
 });
@@ -35,7 +36,7 @@ gulp.task('test', ['build'], function () {
     var mocha = require('gulp-mocha');
     require('should');
 
-    return gulp.src('build/*.js', { read: false })
+    return gulp.src('build/*.js', {read: false})
         .pipe(mocha());
 });
 
