@@ -7,15 +7,6 @@ gulp.task('clean', function (done) {
     fs.remove(path.join(__dirname, '/build'), done);
 });
 
-gulp.task('lint', function () {
-    var jshint = require('gulp-jshint');
-
-    return gulp.src(['index.js', 'test/*.js', 'gulpfile.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter('fail'));
-});
-
 gulp.task('build', ['clean'], function () {
     var webpack = require('gulp-webpack');
 
@@ -40,4 +31,4 @@ gulp.task('test', ['build'], function () {
         .pipe(mocha());
 });
 
-gulp.task('default', ['lint', 'test']);
+gulp.task('default', ['test']);
