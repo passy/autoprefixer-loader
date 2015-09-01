@@ -28,7 +28,7 @@ module.exports = function (source, map) {
         browsers: true,
         cascade: true,
         add: false,
-        remove: true
+        remove: true,
     };
     var unknownParams = [];
     for (var i in params) {
