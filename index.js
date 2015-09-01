@@ -46,7 +46,7 @@ module.exports = function (source, map) {
 
     if (map) {
         options.map = {
-            prev: map
+            prev: map,
         };
     }
 
