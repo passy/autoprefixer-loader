@@ -88,6 +88,34 @@ loaders: [{
 }]
 ```
 
+### `add`
+
+*Default: true*
+
+While disabled, autoprefixer will not add any new prefixes to your code. [Read
+more](https://github.com/postcss/autoprefixer-core#usage)
+
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?add=false',
+  ...
+}]
+```
+
+### `remove`
+
+*Default: true*
+
+Whether or not autoprefixer should automatically remove outdated prefixes. [Read
+more](https://github.com/postcss/autoprefixer-core#usage)
+
+```js
+loaders: [{
+  loader: 'css-loader!autoprefixer-loader?remove=false',
+  ...
+}]
+```
+
 ## Install
 
 `npm install autoprefixer-loader --save-dev`

@@ -27,7 +27,7 @@ module.exports = function (source, map) {
     var whitelist = {
         browsers: true,
         cascade: true,
-        add: false,
+        add: true,
         remove: true,
     };
     var unknownParams = [];
