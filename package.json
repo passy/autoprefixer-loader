@@ -13,20 +13,20 @@
     "url": "https://github.com/passy/autoprefixer-loader/issues"
   },
   "dependencies": {
-    "autoprefixer-core": "^5.2.0",
-    "loader-utils": "^0.2.5",
-    "postcss": "^5.0.3",
+    "autoprefixer-core": "^6.0.1",
+    "loader-utils": "^0.2.11",
+    "postcss": "^5.0.4",
     "postcss-safe-parser": "^1.0.1"
   },
   "devDependencies": {
-    "css-loader": "^0.14.0",
-    "fs-extra": "^0.18.4",
-    "gulp": "^3.8.9",
-    "gulp-mocha": "^2.0.0",
-    "gulp-webpack": "^1.0.0",
+    "css-loader": "^0.17.0",
+    "fs-extra": "^0.24.0",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-webpack": "^1.5.0",
     "raw-loader": "^0.5.1",
-    "should": "^6.0.3",
-    "xo": "^0.7.1"
+    "should": "^7.1.0",
+    "xo": "^0.8.0"
   },
   "keywords": [
     "webpack",
