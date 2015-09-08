@@ -43,7 +43,10 @@
         2,
         "always-multiline"
       ]
-    }
+    },
+    "ignores": [
+      "build/**"
+    ]
   },
   "scripts": {
     "test": "xo && gulp"
