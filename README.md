@@ -124,6 +124,7 @@ loaders: [{
 In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
+* 3.1.0 - Upgrade dependencies, move to autoprefixer (no longer -core)
 * 3.0.0 - Upgrade to autoprefixer-core 6.0
 * 2.1.0 - Add `add`, `remove` options, bump autoprefixer-core
 * 2.0.0 - Updated autoprefixer + postcss
