@@ -1,5 +1,5 @@
 var loaderUtils = require('loader-utils');
-var autoprefixerCore = require('autoprefixer-core');
+var autoprefixer = require('autoprefixer');
 var postcss = require('postcss');
 var path = require('path');
 var safe = require('postcss-safe-parser');
@@ -50,7 +50,7 @@ module.exports = function (source, map) {
         };
     }
 
-    var autoprefixer = autoprefixerCore(params);
-    var processed = postcss([autoprefixer]).process(source, options);
+    var prefixer = autoprefixer(params);
+    var processed = postcss([prefixer]).process(source, options);
     this.callback(null, processed.css, processed.map);
 };
