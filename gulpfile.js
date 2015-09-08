@@ -8,7 +8,7 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('build', ['clean'], function () {
-    var webpack = require('gulp-webpack');
+    var webpack = require('webpack-stream');
 
     return gulp.src('')
         .pipe(webpack({
