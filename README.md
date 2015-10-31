@@ -93,7 +93,7 @@ loaders: [{
 *Default: true*
 
 While disabled, autoprefixer will not add any new prefixes to your code. [Read
-more](https://github.com/postcss/autoprefixer-core#usage)
+more](https://github.com/postcss/autoprefixer#usage)
 
 ```js
 loaders: [{
@@ -107,7 +107,7 @@ loaders: [{
 *Default: true*
 
 Whether or not autoprefixer should automatically remove outdated prefixes. [Read
-more](https://github.com/postcss/autoprefixer-core#usage)
+more](https://github.com/postcss/autoprefixer#usage)
 
 ```js
 loaders: [{
