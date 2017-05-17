@@ -1,5 +1,7 @@
 # autoprefixer-loader [![Build Status](https://travis-ci.org/passy/autoprefixer-loader.svg?branch=master)](https://travis-ci.org/passy/autoprefixer-loader) [![Dependency Status](https://gemnasium.com/passy/autoprefixer-loader.png)](https://gemnasium.com/passy/autoprefixer-loader) [![Code Climate](https://codeclimate.com/github/passy/autoprefixer-loader.png)](https://codeclimate.com/github/passy/autoprefixer-loader)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/passy/autoprefixer-loader.svg)](https://greenkeeper.io/)
+
 An [autoprefixer](https://github.com/ai/autoprefixer) loader for [webpack](https://github.com/webpack/webpack).
 
 > ### :warning: This module is deprecated. [Autoprefixer official page](https://github.com/postcss/autoprefixer#webpack) recommends using [`postcss-loader`](https://github.com/postcss/postcss-loader) instead.
