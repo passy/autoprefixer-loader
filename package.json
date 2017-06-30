@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.0.2",
-    "loader-utils": "^0.2.11",
+    "loader-utils": "^1.1.0",
     "postcss": "^5.0.4",
     "postcss-safe-parser": "^1.0.1"
   },
