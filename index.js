@@ -18,7 +18,7 @@ module.exports = function (source, map) {
         params.cascade = false;
     }
 
-    var options = {from: path.relative(this.options.context, this.resource)};
+    var options = {from: path.relative(this.options.rootContext, this.resource)};
     if (params.safe) {
         delete params.safe;
         options.parser = safe;
